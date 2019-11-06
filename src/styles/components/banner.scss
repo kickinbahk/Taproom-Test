@@ -4,9 +4,23 @@
 
 }
 
+#announcement-bar .announcement-bar-icon {
+
+}
+
+#announcement-bar #announcement-bar-icon-left {
+  float: left;
+}
+
+#announcement-bar #announcement-bar-icon-right {
+  float: right;
+  transform: scaleX(-1);
+}
+
 #announcement-bar p {
   margin: 0;
   padding-top: 13px;
   color: #fff;
   text-align: center;
+  font-size: 14px;
 }
