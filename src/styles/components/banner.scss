@@ -1,3 +1,12 @@
+/**
+ * BANNER
+ */
+
+
+/**
+ * Announcment Bar
+ */
+
 #announcement-bar {
   background-color: #29333F;
   height: 45px;
@@ -43,3 +52,25 @@
   float: right;
   margin: -1px 5px 0 0;
 }
+
+/**
+ * Main Banner
+ */
+
+header {
+  height: 90px;
+
+}
+
+header .logo-image {
+  margin-left: 60px;
+
+  img {
+    width: 160px;
+  }
+}
+
+header .cart {
+  float: right;
+}
+
