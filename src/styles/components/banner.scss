@@ -5,21 +5,34 @@
 }
 
 #announcement-bar .announcement-bar-icon {
-
+  padding-top: 12px;
+  display: inline-block;
+  width: 44%;
 }
 
 #announcement-bar #announcement-bar-icon-left {
   float: left;
+
+  img {
+    float: right;
+  }
 }
 
 #announcement-bar #announcement-bar-icon-right {
   float: right;
   transform: scaleX(-1);
+
+  img {
+    display: inline-block;
+    float: right;
+  }  
 }
 
 #announcement-bar p {
   margin: 0;
+  width: 12%;
   padding-top: 13px;
+  display: inline-block;
   color: #fff;
   text-align: center;
   font-size: 14px;
