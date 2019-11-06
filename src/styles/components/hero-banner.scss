@@ -14,16 +14,32 @@
   background-size: cover;
 }
 
-.hero__inner .text {
-  padding: 5% 0 0 10%;
+.hero__inner .text-block {
+  padding: 10% 0 0 10%;
 }
 
 .hero__inner h2 {
   color: #fff;
-  font-size: 65px;
+  font-size: 90px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.hero__inner .text {
+  color: #fff;
+  font-size: 26px;
+  font-style: italic;
+  font-weight: 100;
+  line-height: 40px;
+  width: 28%;
+
+  p {
+    margin-top: 10px;
+  }
 }
 
 .hero__inner .hero__btn {
   color: #FFF;
   background-color: #29333F;
+  padding: 5px;
 }
