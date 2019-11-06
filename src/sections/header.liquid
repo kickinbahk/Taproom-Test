@@ -55,13 +55,35 @@
       </div>
     {% endif %}
 
-    <a class="search" href="/search">
-      {% include 'icon-search' %}
-    </a>
-
-    <a class="cart" href="/cart">
-      {% include 'icon-cart' %}
-    </a>
+    <nav role="navigation">
+      <ul>
+        {% for link in linklists[section.settings.menu].links %}
+          {% if link.links != blank %}
+            <li>
+              <a href="{{ link.url }}">
+                {{ link.title }}
+                {% include 'icon-arrow-down' %}
+              </a>
+              <ul>
+                {% for childlink in link.links %}
+                  <li>
+                    <a href="{{ childlink.url }}">
+                      {{ childlink.title }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% else %}
+            <li>
+              <a href="{{ link.url }}">
+                {{ link.title }}
+              </a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>    
 
     {% if shop.customer_accounts_enabled %}
       <ul>
@@ -88,37 +110,15 @@
       </ul>
     {% endif %}
 
-  </header>
+    <a class="search" href="/search">
+      {% include 'icon-search' %}
+    </a>
 
-  <nav role="navigation">
-    <ul>
-      {% for link in linklists[section.settings.menu].links %}
-        {% if link.links != blank %}
-          <li>
-            <a href="{{ link.url }}">
-              {{ link.title }}
-              {% include 'icon-arrow-down' %}
-            </a>
-            <ul>
-              {% for childlink in link.links %}
-                <li>
-                  <a href="{{ childlink.url }}">
-                    {{ childlink.title }}
-                  </a>
-                </li>
-              {% endfor %}
-            </ul>
-          </li>
-        {% else %}
-          <li>
-            <a href="{{ link.url }}">
-              {{ link.title }}
-            </a>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </nav>
+    <a class="cart" href="/cart">
+      {% include 'icon-cart' %}
+    </a>
+
+  </header>
 </section>
 
 {% if section.settings.logo != blank %}
