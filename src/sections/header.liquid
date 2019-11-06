@@ -15,9 +15,11 @@
     <div id="announcement-bar">
       {%- if section.settings.announcement_bar_home_page_only == false or template.name == 'index' -%}
         {%- if section.settings.announcement_bar_link != blank -%}
+          <div class="announcement-bar-icon" id="announcement-bar-icon-left"><img src="{{ 'angle-left.png' | asset_url }}" /></div>
           <a href="{{ section.settings.announcement_bar_link }}">
             {{ section.settings.announcement_bar_text | escape }}
           </a>
+          <div class="announcement-bar-icon" id="announcement-bar-icon-right"><img src="{{ 'angle-left.png' | asset_url }}" /></div>
         {%- else -%}
           <div class="announcement-bar-icon" id="announcement-bar-icon-left"><img src="{{ 'angle-left.png' | asset_url }}" /></div>
           <p>{{ section.settings.announcement_bar_text | escape }}</p>
