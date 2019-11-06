@@ -54,6 +54,9 @@ npm-debug.log
 .Trashes
 ehthumbs.db
 Thumbs.db
+.bashrc
+install-key.pem
+install.pem
 
 # Custom #
 ######################
