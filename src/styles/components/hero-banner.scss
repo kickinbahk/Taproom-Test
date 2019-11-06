@@ -1,3 +1,8 @@
+.hero {
+  height: 1000px; 
+  background-size: cover;
+}
+
 .hero-banner {
   background-repeat: no-repeat;
   background-size: cover;
@@ -7,4 +12,18 @@
   min-height: 278px;
   background-position: center;
   background-size: cover;
+}
+
+.hero__inner .text {
+  padding: 5% 0 0 10%;
+}
+
+.hero__inner h2 {
+  color: #fff;
+  font-size: 65px;
+}
+
+.hero__inner .hero__btn {
+  color: #FFF;
+  background-color: #29333F;
 }
