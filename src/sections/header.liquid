@@ -23,7 +23,11 @@
         {%- else -%}
           <div class="announcement-bar-icon" id="announcement-bar-icon-left"><img src="{{ 'angle-left.png' | asset_url }}" /></div>
           <p>{{ section.settings.announcement_bar_text | escape }}</p>
-          <div class="announcement-bar-icon" id="announcement-bar-icon-right"><img src="{{ 'angle-left.png' | asset_url }}" /></div>
+          <div class="announcement-bar-icon" id="announcement-bar-icon-right">
+            <img src="{{ 'angle-left.png' | asset_url }}" />
+            <div id="announcement-bar-close"><img src="{{ 'close.png' | asset_url }}" /></div>
+          </div>
+
         {%- endif -%}
       {%- endif -%}
     </div>

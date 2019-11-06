@@ -7,11 +7,12 @@
 #announcement-bar .announcement-bar-icon {
   padding-top: 12px;
   display: inline-block;
-  width: 44%;
+
 }
 
 #announcement-bar #announcement-bar-icon-left {
   float: left;
+  width: 44%;
 
   img {
     float: right;
@@ -20,10 +21,11 @@
 
 #announcement-bar #announcement-bar-icon-right {
   float: right;
-  transform: scaleX(-1);
+  width: 44%;
 
   img {
-    float: right;
+    transform: scaleX(-1);
+    float: left;
   }  
 }
 
@@ -35,4 +37,9 @@
   color: #fff;
   text-align: center;
   font-size: 14px;
+}
+
+#announcement-bar #announcement-bar-close {
+  float: right;
+  margin: -1px 5px 0 0;
 }
