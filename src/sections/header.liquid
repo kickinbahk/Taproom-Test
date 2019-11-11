@@ -33,9 +33,9 @@
     </div>
   {%- endif -%}
 
-  <header role="banner">
+  <header role="banner" class="container twelve columns">
     {% if template.name == 'index' %}
-      <h1>
+      <h1 class="banner-logo">
     {% else %}
       <div class="h1">
     {% endif %}
@@ -64,9 +64,9 @@
                 {{ link.title }}
                 {% include 'icon-arrow-down' %}
               </a>
-              <ul>
+              <ul class="mega-menu">
                 {% for childlink in link.links %}
-                  <li>
+                  <li class="mega-menu item">
                     <a href="{{ childlink.url }}">
                       {{ childlink.title }}
                     </a>

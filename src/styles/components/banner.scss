@@ -57,10 +57,17 @@
  * Main Banner
  */
 
-header {
+header.container {
   height: 90px;
-
+  float: none;
+  max-width: 100%;
 }
+
+header .banner-logo {
+  margin-bottom: 0;
+  padding-top: 15px;
+}
+
 
 header .logo-image {
   margin-left: 60px;
