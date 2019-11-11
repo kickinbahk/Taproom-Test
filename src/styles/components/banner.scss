@@ -11,6 +11,9 @@
   background-color: #29333F;
   height: 45px;
 
+  @media (max-width: 1024px) {
+    display: none;
+  }
 }
 
 #announcement-bar .announcement-bar-icon {
