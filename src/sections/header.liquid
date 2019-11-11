@@ -10,6 +10,7 @@
   Theme Store optional settings
   - Home page only: only shows on the home page
 {%- endcomment -%}
+
 <section data-section-id="{{ section.id }}" data-section-type="header">
   {%- if section.settings.announcement_bar_enabled -%}
     <div id="announcement-bar">
@@ -119,6 +120,13 @@
       <a class="icon cart" href="/cart">
         <img src="{{ 'cart.png' | asset_url }}" />
       </a>    
+    </div>
+
+    <div id="mobile-nav">
+      <a class="icon cart" href="/cart">
+        <img src="{{ 'cart.png' | asset_url }}" />
+      </a>  
+      {% include 'icon-hamburger' %}
     </div>
   </header>
 </section>

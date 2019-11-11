@@ -107,6 +107,10 @@ header nav .menu.six.columns {
   @media (max-width: 1300px) {
     margin-left: 3%;
   }  
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 }
 .menu.login {
   margin-top: 30px;
@@ -144,6 +148,9 @@ header .icons {
   @media (max-width: 1300px) {
     margin-left: 20px;
   }  
+  @media (max-width: 1024px) {
+    display: none;
+  }
 }
 
 header .icons .icon {
@@ -171,6 +178,14 @@ header .cart {
   svg {
     width: 24px;
     height: 24px;  
+  }
+}
+
+header #mobile-nav {
+  display: none;
+
+  @media (max-width: 1024px) {
+    display: inline-block;
   }
 }
 
