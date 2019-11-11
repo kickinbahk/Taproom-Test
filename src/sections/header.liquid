@@ -86,9 +86,9 @@
     </nav>    
 
     {% if shop.customer_accounts_enabled %}
-      <ul>
+      <ul class="menu one columns">
         {% if customer %}
-          <li>
+          <li class="menu-item">
             {% if customer.first_name != blank %}
               {% capture first_name %}<a href="/account">{{ customer.first_name }}</a>{% endcapture %}
               {{ 'layout.customer.logged_in_as_html' | t: first_name: first_name }}
@@ -96,15 +96,12 @@
               <a href="/account">{{ 'layout.customer.account' | t }}</a>
             {% endif %}
           </li>
-          <li>
+          <li class="menu-item">
             {{ 'layout.customer.log_out' | t | customer_logout_link }}
           </li>
         {% else %}
-          <li>
+          <li class="menu-item">
             {{ 'layout.customer.log_in' | t | customer_login_link }}
-          </li>
-          <li>
-            {{ 'layout.customer.create_account' | t | customer_register_link }}
           </li>
         {% endif %}
       </ul>
