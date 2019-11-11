@@ -56,10 +56,10 @@
     {% endif %}
 
     <nav role="navigation">
-      <ul>
+      <ul class="menu">
         {% for link in linklists[section.settings.menu].links %}
           {% if link.links != blank %}
-            <li>
+            <li class="menu-item">
               <a href="{{ link.url }}">
                 {{ link.title }}
                 {% include 'icon-arrow-down' %}
@@ -75,7 +75,7 @@
               </ul>
             </li>
           {% else %}
-            <li>
+            <li class="menu item">
               <a href="{{ link.url }}">
                 {{ link.title }}
               </a>
@@ -123,6 +123,9 @@
 
 {% if section.settings.logo != blank %}
   <style>
+    .banner-logo {
+      max-width: {{ section.settings.logo_max_width }}px;
+    }
     .logo-image {
       display: block;
       max-width: {{ section.settings.logo_max_width }}px;

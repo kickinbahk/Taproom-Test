@@ -66,6 +66,7 @@ header.container {
 header .banner-logo {
   margin-bottom: 0;
   padding-top: 15px;
+  float: left;
 }
 
 
@@ -79,6 +80,14 @@ header .logo-image {
 
 header nav li {
   float: left;
+}
+
+header nav .menu {
+  float: left;
+}
+
+header nav .menu .menu-item {
+  list-style-type: none;
 }
 
 header .search {
