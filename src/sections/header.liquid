@@ -56,7 +56,7 @@
     {% endif %}
 
     <nav role="navigation">
-      <ul class="menu six columns offset-by-three">
+      <ul class="menu six columns offset-by-two">
         {% for link in linklists[section.settings.menu].links %}
           {% if link.links != blank %}
             <li class="menu-item">
@@ -86,35 +86,40 @@
     </nav>    
 
     {% if shop.customer_accounts_enabled %}
-      <ul class="menu one columns">
+      <ul class="menu login one columns">
         {% if customer %}
-          <li class="menu-item">
+          <li class="menu-item login">
             {% if customer.first_name != blank %}
               {% capture first_name %}<a href="/account">{{ customer.first_name }}</a>{% endcapture %}
               {{ 'layout.customer.logged_in_as_html' | t: first_name: first_name }}
             {% else %}
-              <a href="/account">{{ 'layout.customer.account' | t }}</a>
+              <a href="/account">{{ 'layout.customer.account' | t | upcase }}</a>
             {% endif %}
           </li>
-          <li class="menu-item">
-            {{ 'layout.customer.log_out' | t | customer_logout_link }}
+          <li class="menu-item login">
+            {{ 'layout.customer.log_out' | t | customer_logout_link | upcase }}
           </li>
         {% else %}
-          <li class="menu-item">
-            {{ 'layout.customer.log_in' | t | customer_login_link }}
+          <li class="menu-item login">
+            {{ 'layout.customer.log_in' | t | customer_login_link | upcase }}
           </li>
         {% endif %}
       </ul>
     {% endif %}
 
-    <a class="search" href="/search">
-      {% include 'icon-search' %}
-    </a>
+    <div class="icons two columns">
+      <a class="icon search" href="/search">
+        <img src="{{ 'search.png' | asset_url }}" />
+      </a>
 
-    <a class="cart" href="/cart">
-      {% include 'icon-cart' %}
-    </a>
+      <a class="icon heart" href="/products">
+        <img src="{{ 'heart.png' | asset_url }}" />
+      </a>
 
+      <a class="icon cart" href="/cart">
+        <img src="{{ 'cart.png' | asset_url }}" />
+      </a>    
+    </div>
   </header>
 </section>
 

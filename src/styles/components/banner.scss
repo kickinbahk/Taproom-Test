@@ -50,7 +50,7 @@
 
 #announcement-bar #announcement-bar-close {
   float: right;
-  margin: -1px 5px 0 0;
+  margin: -1px 6.5% 0 0;
 }
 
 /**
@@ -82,8 +82,15 @@ header nav li {
   float: left;
 }
 
-.menu {
+header nav .menu.six.columns {
   margin-top: 30px;
+
+  @media (max-width: 1500px) {
+    margin-left: 10%;
+  }
+  @media (max-width: 1300px) {
+    margin-left: 5%;
+  }  
 }
 
 .menu .menu-item {
@@ -97,16 +104,73 @@ header nav li {
     color: #29333F;
   }
 
+  @media (max-width: 1300px) {
+    margin-left: 3%;
+  }  
+}
+.menu.login {
+  margin-top: 30px;
+  margin-right: 1%;
+
+  @media (max-width: 1975px) {
+    margin-left: 2%;
+  }
+  @media (max-width: 1685px) {
+    margin-left: 0%;
+  } 
+  @media (max-width: 1200px) {
+    margin-left: 3%;
+  }    
+}
+
+.menu .menu-item.login {
+  a {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 12px;
+    padding: 2px 12px;
+    border-left: 1px solid #E6E9ED;
+    border-right: 1px solid #E6E9ED;
+  }
 }
 
 header nav .mega-menu {
   display: none;
 }
 
+header .icons {
+  margin: 30px 0 0 10px;
+
+  @media (max-width: 1300px) {
+    margin-left: 20px;
+  }  
+}
+
+header .icons .icon {
+ width: 33%;
+
+}
+
 header .search {
-  float: right;
+  float: left;
+  width: 24px;
+  height: 24px;
+
+  svg {
+    width: 24px;
+    height: 24px;  
+  }
+}
+
+header .heart {
+  float: left;
 }
 header .cart {
-  float: right;
+  float: left;
+
+  svg {
+    width: 24px;
+    height: 24px;  
+  }
 }
 
