@@ -83,11 +83,21 @@ header nav li {
 }
 
 header nav .menu {
-  float: left;
+
 }
 
 header nav .menu .menu-item {
   list-style-type: none;
+
+  a {
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+}
+
+header nav .mega-menu {
+  display: none;
 }
 
 header .search {

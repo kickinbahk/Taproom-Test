@@ -56,7 +56,7 @@
     {% endif %}
 
     <nav role="navigation">
-      <ul class="menu">
+      <ul class="menu six columns offset-by-three">
         {% for link in linklists[section.settings.menu].links %}
           {% if link.links != blank %}
             <li class="menu-item">
@@ -66,7 +66,7 @@
               </a>
               <ul class="mega-menu">
                 {% for childlink in link.links %}
-                  <li class="mega-menu item">
+                  <li class="mega-menu-item">
                     <a href="{{ childlink.url }}">
                       {{ childlink.title }}
                     </a>
@@ -75,7 +75,7 @@
               </ul>
             </li>
           {% else %}
-            <li class="menu item">
+            <li class="menu-item">
               <a href="{{ link.url }}">
                 {{ link.title }}
               </a>
