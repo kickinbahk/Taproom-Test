@@ -65,15 +65,7 @@
                 {{ link.title }}
                 {% include 'icon-arrow-down' %}
               </a>
-              <ul class="mega-menu">
-                {% for childlink in link.links %}
-                  <li class="mega-menu-item">
-                    <a href="{{ childlink.url }}">
-                      {{ childlink.title }}
-                    </a>
-                  </li>
-                {% endfor %}
-              </ul>
+              <!-- Show Mega Menu Items lower in HTML for styling purposes -->
             </li>
           {% else %}
             <li class="menu-item">
@@ -120,6 +112,40 @@
       <a class="icon cart" href="/cart">
         <img src="{{ 'cart.png' | asset_url }}" />
       </a>    
+    </div>
+
+    <div class="mega-menu">
+
+      {% for link in linklists[section.settings.menu].links %} 
+        {% if link.links != blank %}
+          {% for childlink in link.links %}
+            {% assign listCounter = forloop.index | modulo: 4 %}
+
+            {% if listCounter == 1 %}
+              <ul>
+                <li class="mega-menu-item">
+                  <a href="{{ childlink.url }}">
+                    {{ childlink.title }}
+                  </a>
+                </li>
+            {% elsif listCounter == 0 %}  
+                <li class="mega-menu-item">
+                  <a href="{{ childlink.url }}">
+                    {{ childlink.title }}
+                  </a>
+                </li>
+              </ul>              
+            {% else %}
+                <li class="mega-menu-item">
+                  <a href="{{ childlink.url }}">
+                    {{ childlink.title }}
+                  </a>
+                </li>
+            {% endif %}        
+          {% endfor %}
+
+        {% endif %}        
+      {% endfor %}
     </div>
 
     <div id="mobile-nav">

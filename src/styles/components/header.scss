@@ -142,8 +142,12 @@ header nav .menu.six.columns {
   }
 }
 
-header nav .mega-menu {
-  display: none;
+header .mega-menu {
+  background: #fff;
+
+}
+header .mega-menu .mega-menu-item {
+  list-style-type: none;
 }
 
 header .icons {
