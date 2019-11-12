@@ -114,20 +114,27 @@
       </a>    
     </div>
 
-    <div class="mega-menu">
-
+    <div class="mega-menu ten columns offset-by-one">
       {% for link in linklists[section.settings.menu].links %} 
         {% if link.links != blank %}
           {% for childlink in link.links %}
             {% assign listCounter = forloop.index | modulo: 4 %}
 
-            {% if listCounter == 1 %}
-              <ul>
-                <li class="mega-menu-item">
+            {% if forloop.index == 13 %}
+              <ul class="mega-menu-group mega-odd">
+                <li class="mega-menu-item mega-odd">
                   <a href="{{ childlink.url }}">
                     {{ childlink.title }}
                   </a>
                 </li>
+            {% elsif listCounter == 1%}  
+              <ul class="mega-menu-group">
+                <h4 class="mega-menu-title">Label</h4>
+                <li class="mega-menu-item">
+                  <a href="{{ childlink.url }}">
+                    {{ childlink.title }}
+                  </a>
+                </li>              
             {% elsif listCounter == 0 %}  
                 <li class="mega-menu-item">
                   <a href="{{ childlink.url }}">
