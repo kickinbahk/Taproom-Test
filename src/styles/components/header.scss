@@ -1,5 +1,5 @@
 /**
- * BANNER
+ * HEADER
  */
 
 
@@ -52,6 +52,7 @@
 }
 
 #announcement-bar #announcement-bar-close {
+  cursor: pointer;
   float: right;
   margin: -1px 6.5% 0 0;
 }
@@ -192,3 +193,6 @@ header #mobile-nav {
   }
 }
 
+.closed {
+  display: none !important;
+}
