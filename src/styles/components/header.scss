@@ -228,6 +228,10 @@ header #mobile-nav {
   }
 }
 
+.mobile-nav-open .icon-close {
+  display: none;
+}
+
 .closed {
   display: none !important;
 }

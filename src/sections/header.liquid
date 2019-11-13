@@ -159,7 +159,10 @@
       <a class="icon cart" href="/cart">
         <img src="{{ 'cart.png' | asset_url }}" />
       </a>  
-      {% include 'icon-hamburger' %}
+      <div class="mobile-nav-open">
+        {% include 'icon-hamburger' %}
+        {% include 'icon-close' %}
+      </div>
     </div>
   </header>
 </section>
