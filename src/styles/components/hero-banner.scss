@@ -23,6 +23,16 @@
   font-size: 90px;
   font-weight: 400;
   margin: 0;
+
+  @media (max-width: 1024px) {
+    font-size: 30px;
+  }
+}
+
+.hero__inner .title {
+  @media (max-width: 1024px) {
+    margin-top: 5%;
+  }
 }
 
 .hero__inner .text {
@@ -35,6 +45,10 @@
 
   p {
     margin-top: 10px;
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
   }
 }
 
