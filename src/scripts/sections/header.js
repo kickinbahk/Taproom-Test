@@ -18,6 +18,15 @@ $('.mega-menu-parent').on('hover', function(e) {
 });
 
 $('.mobile-nav-open').bind('click touchstart', function() {
-  console.log('{% include "icon-close" %}')
-  $('{% include "icon-close" %}').prependTo('.mobile-nav-open');
+  var isOpen = $('.mobile-nav-open .icon-close').hasClass('open');
+
+  if(!isOpen) {
+    $('.mobile-nav-open .icon-close').addClass('open');
+    $('.mobile-nav-open .icon-hamburger').addClass('closed');
+  }
+
+  if(isOpen) {
+    $('.mobile-nav-open .icon-close').removeClass('open');
+    $('.mobile-nav-open .icon-hamburger').removeClass('closed');
+  }
 });
