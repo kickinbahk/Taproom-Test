@@ -118,16 +118,17 @@ header nav .menu.six.columns {
 }
 .menu.login {
   margin-top: 30px;
-  margin-right: 1%;
 
   @media (max-width: 1975px) {
     margin-left: 2%;
   }
   @media (max-width: 1685px) {
     margin-left: 0%;
+    width: 6%;
   } 
-  @media (max-width: 1200px) {
+  @media (max-width: 1300px) {
     margin-left: 3%;
+    width: 8%
   }    
 }
 
@@ -140,6 +141,10 @@ header nav .menu.six.columns {
     border-left: 1px solid #E6E9ED;
     border-right: 1px solid #E6E9ED;
   }
+
+  @media (max-width: 1800px) {
+    margin-left: 0%;
+  } 
 }
 
 header .mega-menu {
@@ -167,6 +172,7 @@ header .mega-menu-group .mega-menu-title {
   padding-bottom: 5px;
   margin-bottom: 10px;
   border-bottom: solid 1px #29333F;
+
 }
 
 header .mega-menu .mega-menu-item {
@@ -182,10 +188,11 @@ header .mega-menu .mega-menu-item {
 
 
 header .icons {
-  margin: 30px 0 0 10px;
+  margin: 30px 0 0 0;
+  width: 12%;
 
   @media (max-width: 1300px) {
-    margin-left: 20px;
+    margin-left: 10px;
   }  
   @media (max-width: 1024px) {
     display: none;
