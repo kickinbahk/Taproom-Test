@@ -1,6 +1,13 @@
 .hero {
   height: 1000px; 
   background-size: cover;
+
+  @media (max-width: 1024px) {
+    height: 800px; 
+  }
+  @media (max-width: 580px) {
+    height: 600px; 
+  }
 }
 
 .hero-banner {
@@ -31,7 +38,7 @@
 
 .hero__inner .title {
   @media (max-width: 1024px) {
-    margin-top: 5%;
+    margin-top: 20%;
   }
 }
 
@@ -48,7 +55,7 @@
   }
 
   @media (max-width: 1024px) {
-    width: 100%;
+    width: 90%;
   }
 }
 

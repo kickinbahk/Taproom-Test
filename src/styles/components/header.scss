@@ -17,7 +17,7 @@
 }
 
 #announcement-bar .announcement-bar-icon {
-  padding-top: 12px;
+  padding-top: 15px;
   display: inline-block;
 
 }
@@ -29,6 +29,10 @@
   img {
     float: right;
   }
+
+  @media (max-width: 2010px) {
+    width: 37%
+  }
 }
 
 #announcement-bar #announcement-bar-icon-right {
@@ -39,6 +43,10 @@
     transform: scaleX(-1);
     float: left;
   }  
+
+  @media (max-width: 2010px) {
+    width: 37%
+  }
 }
 
 #announcement-bar p {
@@ -49,12 +57,16 @@
   color: #fff;
   text-align: center;
   font-size: 14px;
+
+  @media (max-width: 2010px) {
+    width: 26%
+  }
 }
 
 #announcement-bar #announcement-bar-close {
   cursor: pointer;
   float: right;
-  margin: -1px 6.5% 0 0;
+  margin: -3px 6.5% 0 0;
 }
 
 /**
@@ -65,12 +77,20 @@ header.container {
   height: 90px;
   float: none;
   max-width: 100%;
+
+  @media (max-width: 1024px) {
+    height: 60px;
+  }
 }
 
 header .banner-logo {
   margin-bottom: 0;
   padding-top: 15px;
   float: left;
+
+  @media (max-width: 1024px) {
+    padding-top: 0;
+  }
 }
 
 
@@ -79,6 +99,11 @@ header .logo-image {
 
   img {
     width: 160px;
+  }
+
+  @media (max-width: 549px) {
+    margin-left: 0;
+    margin-top: 15px;
   }
 }
 
@@ -128,8 +153,11 @@ header nav .menu.six.columns {
   } 
   @media (max-width: 1300px) {
     margin-left: 3%;
-    width: 8%
+    width: 8%;
   }    
+  @media (max-width: 1024px) {
+    display: none;
+  }
 }
 
 .menu .menu-item.login {
@@ -229,10 +257,22 @@ header .cart {
 
 header #mobile-nav {
   display: none;
+  float: right;
+  margin: 15px 15px 0 0;
 
   @media (max-width: 1024px) {
     display: inline-block;
   }
+  @media (max-width: 791px) {
+    margin: -40px 15px 0 0;
+  }
+  @media (max-width: 549px) {
+    margin: -100px 15px 0 0;
+  }
+}
+
+#mobile-nav .icon.cart {
+  margin: 5px 10px 0 0;
 }
 
 .mobile-nav-open .icon-close {
