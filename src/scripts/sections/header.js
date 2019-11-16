@@ -7,14 +7,14 @@ $('#announcement-bar-close').bind('click touchstart', function() {
   $('#announcement-bar').addClass('closed');
 });
 
-$('.mega-menu-parent').on('hover', function(e) {
-  if(e.type == 'mouseenter') {
-    $('.mega-menu').removeClass('closed');
-  }
+$('.menu-item.mega-menu-parent').hover(function() {
 
-  if (e.type == 'mouseleave') {
-    $('.mega-menu').addClass('closed');
-  }
+  console.log('enter')
+  $('.mega-menu').removeClass('closed');
+
+}, function() {
+  console.log('exit')
+  $('.mega-menu').addClass('closed');
 });
 
 $('.mobile-nav-open').bind('click touchstart', function() {
