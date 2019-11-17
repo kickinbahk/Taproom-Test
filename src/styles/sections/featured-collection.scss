@@ -1,19 +1,39 @@
 .featured-collection {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: $grid-max-width;
+  width: 90%;
+  max-width: 90%;
+  margin: 4% auto;
 }
 
 .featured-collection-item {
-  flex: 1 1 percentage(1 / 3);
-  height: 100%;
+  height: 80%;
   text-align: center;
+  margin: 0;
+  width: 20% !important;
+  text-decoration: none;
+
+}
+
+.featured-collection-item:first-of-type {
+  margin-left: 10%;
 }
 
 .featured-collection__image {
   min-width: 320px;
 }
 
+.featured-collection-item p {
+  color: #29333F;
+  width: 80%;
+  margin: 15px 0 15px 10%;
+}
+
+.featured-collection-item span {
+  color: #29333F;
+}
+
 .featured-collection__title {
   flex-basis: 100%;
+  text-align: center;
+  font-weight: 500;
+  font-size: 39px;
 }
