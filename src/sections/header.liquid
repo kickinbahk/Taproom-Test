@@ -167,6 +167,34 @@
   </header>
 </section>
 
+<div class="mobile-menu closed">
+  <ul>
+  {% for link in linklists[section.settings.menu].links %}
+    {% if forloop.last %}
+      <li class="mobile-menu-item last">
+        <a href="{{ link.url }}">
+          {{ link.title }}
+        </a>
+      </li>
+    {% elsif link.links != blank %}  
+      <li class="mobile-menu-item mobile-mega-menu-parent">
+        <a href="{{ link.url }}">
+          {{ link.title }}
+          {% include 'icon-plus' %}
+        </a>
+        <!-- Show Mega Menu Items lower in HTML for styling purposes -->
+      </li>
+    {% else %}
+      <li class="mobile-menu-item">
+        <a href="{{ link.url }}">
+          {{ link.title }}
+        </a>
+      </li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+</div>
+
 {% if section.settings.logo != blank %}
   <style>
     .banner-logo {

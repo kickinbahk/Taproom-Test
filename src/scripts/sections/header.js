@@ -8,12 +8,9 @@ $('#announcement-bar-close').bind('click touchstart', function() {
 });
 
 $('.menu-item.mega-menu-parent').hover(function() {
-
-  console.log('enter')
   $('.mega-menu').removeClass('closed');
 
 }, function() {
-  console.log('exit')
   $('.mega-menu').addClass('closed');
 });
 
@@ -23,10 +20,14 @@ $('.mobile-nav-open').bind('click touchstart', function() {
   if(!isOpen) {
     $('.mobile-nav-open .icon-close').addClass('open');
     $('.mobile-nav-open .icon-hamburger').addClass('closed');
+
+    $('.mobile-menu').removeClass('closed');
   }
 
   if(isOpen) {
     $('.mobile-nav-open .icon-close').removeClass('open');
     $('.mobile-nav-open .icon-hamburger').removeClass('closed');
+
+    $('.mobile-menu').addClass('closed');
   }
 });

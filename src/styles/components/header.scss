@@ -279,6 +279,39 @@ header #mobile-nav {
   display: none;
 }
 
+.mobile-menu {
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  box-shadow: 0px -2px 5px 0px rgba(225,230,235,.5);
+
+  ul {
+    margin: 0;
+  }
+}
+
+.mobile-menu .mobile-menu-item {
+  list-style: none;
+  border-bottom: solid 1px #E1E6EB;
+  padding: 20px 0 20px 0;
+  margin: 0 0 0 3%;
+  width: 94%;
+
+  a {
+    color: #29333F;
+    font-weight: 500;
+    text-decoration: none;
+  }
+}
+
+.mobile-menu .mobile-menu-item .icon {
+  float: right;
+  color: #a9a9a9;
+}
+
+.mobile-menu .mobile-menu-item.last {
+  border-bottom: none;
+}
 .closed {
   display: none !important;
 }
