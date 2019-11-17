@@ -8,3 +8,9 @@ $('.featured-collection-item').hover(function() {
 }, function() {
   $(this).find('.featured-collection__image .quick-view').removeClass('show');
 })
+
+$('.quick-view-button').on('click touchstart', function(e) {
+  e.preventDefault();
+  
+  console.log('button clicked');
+})
