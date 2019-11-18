@@ -68,3 +68,15 @@
   font-size: 39px;
   margin-bottom: 35px;
 }
+
+.modal-overlay {
+  opacity: 0.8;
+  background-color: #000000;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 199;
+}
+
