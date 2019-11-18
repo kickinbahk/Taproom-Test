@@ -17,11 +17,11 @@ $('.quick-view-button').on('click touchstart', function(e) {
   var url = '/products/' + productTitleURLSafe +'.js';
 
   $.getJSON(url, function(product) {
-    console.log(product);
+    var productId = Object.values(product.variants[0])[0]
 
     $('.quick-look-image img').attr('src', product.featured_image);
     $('.quick-look-product-info .vendor').text(product.vendor);
-    $('.quick-look-product-info .sku').text(product.id);
+    $('.quick-look-product-info .sku').text(productId);
     $('.quick-look-product-info .product-title').text(product.title);   
     $('.quick-look-product-info .price').text('$' + (product.price / 100));    
     $('.quick-look-product-info .description').text(product.description); 
@@ -42,8 +42,6 @@ $('.quantity-icon.minus').on('click touchstart', function() {
 });
 
 $('.quantity-icon.plus').on('click touchstart', function() {
-
-  
   var quantity = Number($('.product-quantity-box .quantity').val());
   quantity += 1
 
@@ -54,3 +52,28 @@ $('.modal-overlay').on('click touchstart', function() {
   $('.quick-look-modal').addClass('closed');
   $('.modal-overlay').addClass('closed');
 });
+
+
+$('.add-to-cart').on('click touchstart', function() {
+  var quantity = $('.product-quantity-box .quantity').val();
+  var id = $('.quick-look-product-info .sku').text();
+
+  $.ajax({
+    type: 'POST',
+    url: '/cart/add.js',
+    data: "quantity=" + Number(quantity) + "&id=" + Number(id),
+    dataType: 'json',
+    success: function() { 
+      console.log("item added to cart") 
+      $('.add-to-cart').text('Item added to Cart');
+
+      setTimeout(function() {
+        $('.add-to-cart').text('Add To Cart');
+      }, 3000);
+    },
+    error: function (error) { 
+      console.log(error);
+    }
+  }); 
+}); 
+

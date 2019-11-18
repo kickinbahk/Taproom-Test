@@ -16,7 +16,7 @@
   {%- assign collection = collections[section.settings.collection] -%}
   <div class="row">
     {% for product in collection.products limit: 6 %}
-      <a href="{{ product.url | within: collection }}" class="featured-collection-item three columns" data-productHandle="{{ product.handle }}">
+      <a href="{{ product.url | within: collection }}" class="featured-collection-item three columns" data-productHandle="{{ product.handle }}" data-productId="{{ product.id }}">
         {% if product.featured_image != blank %}
           <div class="featured-collection__image">
             {% include 'responsive-image' with
