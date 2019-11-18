@@ -85,6 +85,17 @@
 
 }
 
+.quick-look-image {
+  width: 50%;
+
+  img {
+    height: 700px;
+  }
+}
+
+.quick-look-product-info {
+  width: 50%;
+}
 .modal-overlay {
   opacity: 0.8;
   background-color: #000000;

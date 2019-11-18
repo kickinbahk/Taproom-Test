@@ -16,7 +16,7 @@
   {%- assign collection = collections[section.settings.collection] -%}
   <div class="row">
     {% for product in collection.products limit: 6 %}
-      <a href="{{ product.url | within: collection }}" class="featured-collection-item three columns">
+      <a href="{{ product.url | within: collection }}" class="featured-collection-item three columns" data-productHandle="{{ product.handle }}">
         {% if product.featured_image != blank %}
           <div class="featured-collection__image">
             {% include 'responsive-image' with
@@ -30,7 +30,7 @@
           </div>
         {% endif %}
 
-        <p>{{ product.title | escape }}</p>
+        <p class="product-title">{{ product.title | escape }}</p>
         <span>
           {% if product.compare_at_price > product.price %}
             {% if product.price_varies %}
@@ -56,7 +56,7 @@
           {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
           {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg placeholder-svg--small' }}
 
-          <p>{{ 'homepage.onboarding.product_title' | t }}</p>
+          <p class="product-title">{{ 'homepage.onboarding.product_title' | t }}</p>
           <p>{{ 1999 | money }}</p>
         </a>
       {% endfor %}
@@ -64,13 +64,17 @@
   </div>
 </section>
 
-<div class="container">
-  <div class="quick-look-modal ten columns">
-    <p>Glad Tidings to all</p>
+<div class="container closed">
+  <div class="quick-look-modal eight columns">
+    <div class="quick-look-image"><img src="https://cdn.shopify.com/s/files/1/0056/5402/0130/products/Bag_1_300x.png?v=1573949335" /></div>
+    <div class="quick-look-product-info">
+      <p>Vendor Name</p>
+      <p></p>
+    </div>
   </div>
 </div>
 
-<div class="modal-overlay"></div> 
+<div class="modal-overlay closed"></div> 
 
 {% schema %}
   {
