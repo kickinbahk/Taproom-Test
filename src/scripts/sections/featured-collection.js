@@ -12,17 +12,45 @@ $('.featured-collection-item').hover(function() {
 $('.quick-view-button').on('click touchstart', function(e) {
   e.preventDefault();
 
-  console.log('button clicked');
-
   var productTitle = $(this).closest('.featured-collection-item').attr('data-productHandle')
   var productTitleURLSafe = productTitle.replace(/ /g, '-');
   var url = '/products/' + productTitleURLSafe +'.js';
 
-  console.log(url)
-
   $.getJSON(url, function(product) {
-    alert('The title of this product is ' + product.title);
-  } );
+    console.log(product);
 
-  $('.modal-overlay').removeClass('closed');
+    $('.quick-look-image img').attr('src', product.featured_image);
+    $('.quick-look-product-info .vendor').text(product.vendor);
+    $('.quick-look-product-info .sku').text(product.id);
+    $('.quick-look-product-info .product-title').text(product.title);   
+    $('.quick-look-product-info .price').text('$' + (product.price / 100));    
+    $('.quick-look-product-info .description').text(product.description); 
+
+    $('.quick-look-modal').removeClass('closed');
+    $('.modal-overlay').removeClass('closed');
+  });
+});
+
+$('.quantity-icon.minus').on('click touchstart', function() {
+  var quantity = Number($('.product-quantity-box .quantity').val());
+  quantity -= 1
+  
+  if(quantity > 0) {
+    $('.product-quantity-box .quantity').val(quantity);
+  }
+
+});
+
+$('.quantity-icon.plus').on('click touchstart', function() {
+
+  
+  var quantity = Number($('.product-quantity-box .quantity').val());
+  quantity += 1
+
+  $('.product-quantity-box .quantity').val(quantity);
+});
+
+$('.modal-overlay').on('click touchstart', function() {
+  $('.quick-look-modal').addClass('closed');
+  $('.modal-overlay').addClass('closed');
 });

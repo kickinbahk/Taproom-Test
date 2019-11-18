@@ -54,7 +54,7 @@
 .featured-collection-item p {
   color: #29333F;
   width: 80%;
-  margin: 15px 0 15px 10%;
+  margin: 15px 0 10px 10%;
 }
 
 .featured-collection-item span {
@@ -82,11 +82,47 @@
   overflow: hidden;
   border-radius: 5px;
   background-color: #fff;
+}
 
+.quick-look-modal .vendor {
+  font-style: italic;
+  font-weight: 300;
+  color: #565E68;
+  margin-bottom: 0;
+}
+
+.quick-look-modal .sku {
+  font-style: italic;
+  font-weight: 300;
+  color: #565E68
+}
+
+.quick-look-modal .product-title {
+  font-style: italic;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #D1D1D1;
+}
+
+.quick-look-modal .price {
+  font-style: italic;
+  font-size: 30px;
+  font-weight: 300;
+  color: #565E68
+}
+
+.quick-look-modal .description {
+  font-style: italic;
+  font-weight: 300;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #D1D1D1;
+  color: #565E68;
 }
 
 .quick-look-image {
   width: 50%;
+  display: inline-block;
 
   img {
     height: 700px;
@@ -95,7 +131,56 @@
 
 .quick-look-product-info {
   width: 50%;
+  float: right;
+  padding: 40px;
 }
+
+.product-quantity-box {
+  padding: 0 5px;
+  width: 30%;
+}
+.quantity-icon {
+  float: left;
+  height: 38px;
+  width: 38px;
+  text-align: center;
+  background-color: #F2F5FA;
+  font-size: 23px;
+  cursor: pointer;
+  border: 1px solid #D1D1D1;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.quantity {
+  float: left;
+  text-align: center;
+  width: 40px;
+
+}
+
+.add-to-cart {
+  display: inline-block;
+  width: 75%;
+  height: 38px;
+  background-color: #29333F;
+  margin: 0 0 0 10px;
+  color: #fff;
+  text-align: center;
+  padding-top: 5px;
+  cursor: pointer;
+}
+
 .modal-overlay {
   opacity: 0.8;
   background-color: #000000;
